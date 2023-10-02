@@ -10,3 +10,11 @@ PRODUCT_PACKAGES += \
     TurboAdapter \
     com.google.android.apps.dialer.call_recording_audio.features \
     product_charger_res_images
+
+# Google Fi
+HAS_ESIM ?= false
+ifeq ($(HAS_ESIM),true)
+PRODUCT_PACKAGES += \
+    GoogleConnectivityServices \
+    GoogleFiWireless
+endif
